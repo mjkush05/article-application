@@ -1,0 +1,14 @@
+
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+<div class="ml-5 form-group">
+  <%= form.label :commenter %><br>
+  <%= form.text_field :commenter, class: "form-control"%>
+</div>
+<div class="form-group ml-5">
+  <%= form.label :body %><br>
+  <%= form.text_area :body, class: "form-control" %>
+</div>
+<p class="ml-5">
+  <%= form.submit %>
+</p>
+<% end %>
